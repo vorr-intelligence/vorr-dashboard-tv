@@ -364499,35 +364499,35 @@
         "2023-06": 139214.9899999999,
         "2023-10": 428722.34000000654,
         "2023-09": 367616.8800000058,
-        "2023-04": 1095.31,
-        "2023-12": 512859.33000000654,
         "2023-08": 431841.2300000047,
-        "2023-11": 442794.25000000466,
         "2023-07": 475075.1800000076,
-        "2024-09": 294244.05000000144,
+        "2023-12": 512859.33000000654,
+        "2023-04": 1095.31,
+        "2023-11": 442794.25000000466,
+        "2024-06": 237253.4599999977,
         "2024-08": 310076.48,
-        "2024-05": 347735.800000005,
-        "2024-10": 407669.00999999803,
-        "2024-12": 238412.4599999967,
-        "2024-04": 482716.610000017,
+        "2024-09": 294244.05000000144,
         "2024-01": 202672.42999999612,
         "2024-07": 390236.870000002,
+        "2024-04": 482716.610000017,
         "2024-11": 287026.8999999973,
+        "2024-10": 407669.00999999803,
         "2024-03": 373512.81000000326,
+        "2024-12": 238412.4599999967,
+        "2024-05": 347735.800000005,
         "2024-02": 253650.73999999397,
-        "2024-06": 237253.4599999977,
-        "2025-12": 238035.52999999857,
-        "2025-02": 296065.1399999934,
-        "2025-06": 197516.0799999994,
-        "2025-10": 432726.97000000277,
-        "2025-07": 523403.179999997,
-        "2025-08": 298645.58999999665,
-        "2025-03": 306106.22999999777,
         "2025-11": 260329.0499999972,
+        "2025-03": 306106.22999999777,
+        "2025-02": 296065.1399999934,
         "2025-09": 433044.17000000505,
-        "2025-05": 349194.14000000217,
+        "2025-12": 238035.52999999857,
         "2025-04": 243324.24999999764,
-        "2025-01": 182668.25999999902
+        "2025-06": 197516.0799999994,
+        "2025-08": 298645.58999999665,
+        "2025-05": 349194.14000000217,
+        "2025-01": 182668.25999999902,
+        "2025-10": 432726.97000000277,
+        "2025-07": 523403.179999997
       }
     }
   },
@@ -365703,13 +365703,12 @@ function totalPecasNoPeriodo(produtosDiario, deIso, ateIso){
    estáticos já renderizados em buildVarejo). */
 /* Observações fixas por loja (não vêm de nenhum arquivo — são achados já
    confirmados com a Gabriela que valem citar sempre que a loja aparece).
-   Belvedere: divergência de ~R$20 mil entre relatórios do próprio Omie
-   (Análise Gerencial vs. Cupom Fiscal), confirmada em 17/09/2026 como um
-   problema do lado do Omie (não é algo que a metodologia usada aqui consiga
-   corrigir) — mantida visível em vez de escondida, igual já era feito antes
-   nesse mesmo formato (badge "em investigação"). */
+   Belvedere: a divergência de ~R$20 mil entre relatórios do próprio Omie
+   (Análise Gerencial vs. Cupom Fiscal), que ficou visível aqui desde
+   17/09/2026, foi dada como resolvida pela Gabriela em 07/10/2026 — badge
+   removido. Objeto mantido vazio (em vez de apagado) para reutilizar o
+   mesmo mecanismo se outra loja precisar de alerta fixo no futuro. */
 const ALERTAS_LOJA = {
-  "belvedere": "Divergência de ~R$20 mil entre relatórios do Omie (Análise Gerencial vs. Cupom Fiscal) — problema identificado no próprio Omie, não da metodologia usada aqui."
 };
 const ICONE_ALERTA_LOJA = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>`;
 function badgeAlertaLoja(nomeLoja){
